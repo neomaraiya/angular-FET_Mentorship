@@ -1,0 +1,22 @@
+<input type="text" [(ngModel)]="name"/>
+<button (click)="onAddUser()">Add User</button>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <td>
+        <app-user [name]="user"></app-user>
+      </td>
+      <td>
+        <button>Edit</button>
+        <button>Remove</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
